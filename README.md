@@ -1,0 +1,2 @@
+# stocktory
+Simple inventory management
