@@ -56,5 +56,56 @@ module.exports = {
         } catch (err) {
             res.status(500).json({ error: err.message })
         }
+    },
+    async addSingleProduct(req, res) {
+        const newProduct = {
+            productName: req.body.name,
+            description: req.body.description,
+            price: req.body.price,
+            quantity: req.body.quantity
+        }
+
+        try {
+            await db.doc(`/users/${req.params.userId}`)
+                .collection('products')
+                .add(newProduct)
+                .then(doc => {
+                    const resProduct = newProduct
+                    resProduct.id = doc.id
+                    res.json(resProduct)
+                })
+                .catch(err => {
+                    res.status(500).json({ error: 'Something went wrong' })
+                    console.log(err)
+                })
+        } catch (err) {
+            res.status(500).json({ error: err.message })
+        }
+    },
+    async deleteSingleProduct(req, res) {
+        try {
+            const product = await db.doc(`/users/${req.params.userId}`)
+                .collection('products')
+                .doc(req.params.productId)
+                
+                product.get()
+                .then(doc => {
+                    if(!doc.exists) {
+                        res.status(404).json({ error: 'Product not found' })
+                    }
+
+                    return product.delete()
+                })
+                .then(() => {
+                    res.json({ message: 'Poduct deleted successfully' })
+                })
+                .catch(err => {
+                    console.error(err)
+                    return res.status(500).json({ error: err.code })
+                })
+        } catch (err) {
+            console.error(err)
+            res.status(500).json({ error: err.message })
+        }
     }
 }
