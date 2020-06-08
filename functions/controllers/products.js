@@ -97,7 +97,7 @@ module.exports = {
                     return product.delete()
                 })
                 .then(() => {
-                    res.json({ message: 'Poduct deleted successfully' })
+                    res.json({ message: 'Product deleted successfully' })
                 })
                 .catch(err => {
                     console.error(err)
