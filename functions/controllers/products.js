@@ -1,4 +1,5 @@
 const { db } = require('../util/admin')
+const { reduceProductDetails } = require('../util/validators')
 
 module.exports = {
     async getAllProducts(req, res) {
@@ -80,6 +81,24 @@ module.exports = {
                 })
         } catch (err) {
             res.status(500).json({ error: err.message })
+        }
+    },
+    async editProduct(req, res) {
+        let productDetails = reduceProductDetails(req.body)
+
+        try {
+            await db.doc(`/users/${req.params.userId}`)
+            .collection('products')
+            .doc(req.params.productId)
+            .update(productDetails)
+            .then(() => {
+                return res.json({ message: 'Product updated successfully' })
+            })
+            .catch(err => {
+                res.status(400).json({ error: err.message })
+            })
+        } catch (err) {
+            res.status(500).json({ error: 'Something went wrong' })
         }
     },
     async deleteSingleProduct(req, res) {
