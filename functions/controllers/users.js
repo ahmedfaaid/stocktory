@@ -95,6 +95,7 @@ module.exports = {
             res.status(500).json({ error: err.message })
         }
     },
+    // might not be necessary and logout will be handled in client
     async logout(req, res) {
         try {
             await firebase
