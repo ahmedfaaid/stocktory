@@ -41,16 +41,13 @@ exports.validateLoginData = data => {
     }
 }
 
-exports.reduceUserDetails = data => {
-    let userDetails = {}
+exports.reduceProductDetails = data => {
+    let productDetails = {}
 
-    if (!isEmpty(data.bio.trim())) userDetails.bio = data.bio
-    if (!isEmpty(data.website.trim())) {
-        if (data.website.trim().substring(0, 4) !== 'http') {
-            userDetails.website = `http://${data.website.trim()}`
-        } else userDetails.website = data.website
-    }
-    if (!isEmpty(data.location.trim())) userDetails.location = data.location
-
-    return userDetails
+    if (!isEmpty(data.productName.trim())) productDetails.productName = data.productName
+    if (!isEmpty(data.description.trim())) productDetails.description = data.description
+    if (!isEmpty(data.price.trim())) productDetails.price = data.price
+    if (!isEmpty(data.quantity.trim())) productDetails.quantity = data.quantity
+    
+    return productDetails
 }
