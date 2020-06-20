@@ -75,7 +75,8 @@ module.exports = {
 
         if (!valid) return res.status(400).json(errors)
 
-        firebase
+        try {
+            await firebase
             .auth()
             .signInWithEmailAndPassword(user.email, user.password)
             .then(data => {
@@ -90,5 +91,24 @@ module.exports = {
                     .status(403)
                     .json({ general: 'Wrong credentials, please try again' })
             })
+        } catch (err) {
+            res.status(500).json({ error: err.message })
+        }
+    },
+    async logout(req, res) {
+        try {
+            await firebase
+                .auth()
+                .signOut()
+                .then(() => {
+                    return res.status(200).json({ message: 'Successfully signed out' })
+                })
+                .catch(err => {
+                    console.log(err)
+                    return res.status(400).json({ err: err.message })
+                })
+        } catch (err) {
+            res.status(500).json({ general: 'Something went wrong!' })
+        }
     }
 }
