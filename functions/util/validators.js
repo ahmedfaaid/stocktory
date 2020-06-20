@@ -44,10 +44,10 @@ exports.validateLoginData = data => {
 exports.reduceProductDetails = data => {
     let productDetails = {}
 
-    if (!isEmpty(data.productName.trim())) productDetails.productName = data.productName
-    if (!isEmpty(data.description.trim())) productDetails.description = data.description
-    if (!isEmpty(data.price.trim())) productDetails.price = data.price
-    if (!isEmpty(data.quantity.trim())) productDetails.quantity = data.quantity
+    if (data.name && !isEmpty(data.name.trim())) productDetails.productName = data.name
+    if (data.description && !isEmpty(data.description.trim())) productDetails.description = data.description
+    if (data.price && !isEmpty(data.price.trim())) productDetails.price = data.price
+    if (data.quantity && !isEmpty(data.quantity.trim())) productDetails.quantity = data.quantity
     
     return productDetails
 }
