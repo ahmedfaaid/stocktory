@@ -1,0 +1,47 @@
+.sidebar_container {
+  width: 15%;
+  min-height: 100vh;
+  background-color: #0D1B2A;
+  color: #fff;
+  text-align: center
+}
+
+.user_box {
+  padding: 1.5rem;
+}
+
+.user_name {
+  font-size: 2rem;
+}
+
+.separator {
+  width: 80%;
+	margin: auto;
+	border: 0;
+	height: 1px;
+	background: #fff;
+	background-image: linear-gradient(to right, #0D1B2A, #fff, #0D1B2A);
+}
+
+.navigation_list {
+  text-align: left;
+}
+
+.navigation_listItem {
+  width: 100%;
+  font-size: 2rem;
+}
+
+.link {
+  display: block;
+  width: 100%;
+  padding: 2rem;
+}
+
+.link:hover {
+  background-color: #415a77;
+}
+
+.icon {
+  margin-right: 1.2rem;
+}
