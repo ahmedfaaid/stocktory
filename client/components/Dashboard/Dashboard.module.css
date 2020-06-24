@@ -1,0 +1,56 @@
+.dashboard_headingBox {
+  padding: 1.5rem;
+  background-color: #0D1B2A;
+}
+
+.dashboard_headingText {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}
+
+.dashboard_contentBox {
+  padding: 2rem;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.dashboard_card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 30rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 3px 2px #EBEBEB;
+}
+
+.card_green {
+  background-color: #32cd32;
+}
+
+.card_blue {
+  background-color: #007FFF;
+}
+
+.card_orange {
+  background-color: #FFCC99;
+}
+
+.card_number {
+  display: block;
+  color: #fff;
+  font-size: 4rem;
+}
+
+.card_text {
+  display: block;
+  color: #fff;
+  font-size: 2rem;
+  margin-top: 1rem;
+}
+
+.card_icon {
+  color: rgba(0, 0, 0, 0.5);
+  font-size: 6rem;
+}

@@ -1,3 +1,7 @@
 .layout_container {
   display: flex;
 }
+
+.layout_main {
+  width: 100%;
+}
