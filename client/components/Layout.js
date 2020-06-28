@@ -1,11 +1,17 @@
+import Head from 'next/head'
 import styles from './Layout.module.css'
 import Sidebar from './Sidebar/Sidebar'
 
-export default function Layout({ children }) {
+export default function Layout({ children, title }) {
   return (
-    <div className={styles.layout_container}>
-      <Sidebar />
-      <main className={styles.layout_main}>{children}</main>
-    </div>
+    <>
+      <Head>
+        <title>{title} | Stocktory</title>
+      </Head>
+      <div className={styles.layout_container}>
+        <Sidebar />
+        <main className={styles.layout_main}>{children}</main>
+      </div>
+    </>
   )
 }

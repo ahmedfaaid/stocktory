@@ -3,7 +3,7 @@ import DashboardComp from '../components/DashboardComp/DashboardComp'
 
 export default function Dashboard() {
   return (
-    <Layout>
+    <Layout title='Dashboard'>
      <DashboardComp />
     </Layout>
   )
