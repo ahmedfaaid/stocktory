@@ -1,5 +1,6 @@
 const express = require('express')
 const router = express.Router({ mergeParams: true })
+const FBAuth = require('../util/fbAuth')
 
 const {
     getAllProducts,
@@ -9,10 +10,10 @@ const {
     deleteSingleProduct
 } = require('../controllers/products')
 
-router.get('/', getAllProducts)
-router.get('/:productId', getSingleProduct)
-router.delete('/:productId/deleteProduct', deleteSingleProduct)
-router.post('/addProduct', addSingleProduct)
-router.post('/:productId/editProduct', editProduct)
+router.get('/', FBAuth, getAllProducts)
+router.get('/:productId', FBAuth, getSingleProduct)
+router.delete('/:productId/deleteProduct', FBAuth, deleteSingleProduct)
+router.post('/addProduct', FBAuth, addSingleProduct)
+router.post('/:productId/editProduct', FBAuth, editProduct)
 
 module.exports = router
