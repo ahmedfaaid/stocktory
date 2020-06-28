@@ -1,0 +1,10 @@
+.heading_box {
+  padding: 1.5rem;
+  background-color: #0D1B2A;
+}
+
+.heading_text {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}

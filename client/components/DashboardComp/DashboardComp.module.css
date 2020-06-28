@@ -2,17 +2,6 @@
   min-height: 100vh;
 }
 
-.dashboard_headingBox {
-  padding: 1.5rem;
-  background-color: #0D1B2A;
-}
-
-.dashboard_headingText {
-  font-size: 2rem;
-  color: #fff;
-  text-align: center;
-}
-
 .dashboard_contentBox {
   padding: 2rem;
   display: flex;
