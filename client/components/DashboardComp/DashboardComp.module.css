@@ -1,3 +1,7 @@
+.dashboard_container {
+  min-height: 100vh;
+}
+
 .dashboard_headingBox {
   padding: 1.5rem;
   background-color: #0D1B2A;
@@ -13,4 +17,12 @@
   padding: 2rem;
   display: flex;
   justify-content: space-evenly;
+}
+
+.dashboard_chart {
+  width: 100%;
+  margin-top: 5rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  align-items: center;
 }

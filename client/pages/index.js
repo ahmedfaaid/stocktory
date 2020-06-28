@@ -1,10 +1,13 @@
-import Layout from '../components/Layout'
-import Dashboard from '../components/Dashboard/Dashboard'
+import { useEffect } from 'react'
+import Router from 'next/router'
 
-export default function Home() {
-  return (
-    <Layout>
-     <Dashboard />
-    </Layout>
-  )
-}
+ export default function Home() {
+  useEffect(() => {
+    const {pathname} = Router
+    if(pathname == '/' ){
+        Router.push('/dashboard')
+    }
+  })
+
+   return <div>Redirecting...</div>
+ }
