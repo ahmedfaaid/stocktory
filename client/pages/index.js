@@ -1,7 +1,7 @@
 import { useEffect } from 'react'
 import Router from 'next/router'
 
- export default function Home() {
+ export default function HomePage() {
   useEffect(() => {
     const {pathname} = Router
     if(pathname == '/' ){
