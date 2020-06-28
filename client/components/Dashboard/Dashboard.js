@@ -1,7 +1,7 @@
 import PageHeading from '../PageHeading/PageHeading'
 import SummaryCard from '../SummaryCard/SummaryCard'
 import LineChart from '../LineChart/LineChart'
-import styles from './DashboardComp.module.css'
+import styles from './Dashboard.module.css'
 
 export default function Dashboard() {
   const cards = [
