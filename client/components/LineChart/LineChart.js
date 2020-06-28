@@ -5,7 +5,7 @@ import moment from 'moment'
 import { dateArray } from '../../util'
 import styles from './LineChart.module.css'
 
-// Make selection for different time ranges
+// TODO: Make selection for different time ranges
 
 export default function LineChart({ series }) {
   const [data, setData] = useState([])
