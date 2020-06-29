@@ -1,10 +1,10 @@
 import Layout from '../components/Layout'
-import PageHeading from '../components/PageHeading/PageHeading'
+import Products from '../components/Products/Products'
 
 export default function ProductsPage() {
   return (
     <Layout title='Products'>
-      <PageHeading heading='My Products' />
+      <Products />
     </Layout>
   )
 }
