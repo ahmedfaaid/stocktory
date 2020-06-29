@@ -3,7 +3,7 @@ import Orders from '../components/Orders/Orders'
 
 export default function OrdersPage() {
   return (
-    <Layout title='Orders'>
+    <Layout title='Orders' heading='My Orders'>
       <Orders />
     </Layout>
   )

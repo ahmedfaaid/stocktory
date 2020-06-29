@@ -1,4 +1,3 @@
-import PageHeading from '../PageHeading/PageHeading'
 import SummaryCard from '../SummaryCard/SummaryCard'
 import LineChart from '../LineChart/LineChart'
 import styles from './Dashboard.module.css'
@@ -21,7 +20,6 @@ export default function Dashboard() {
 
   return (
     <div className={styles.dashboard_container}>
-      <PageHeading heading='My Dashboard' />
       <div className={styles.dashboard_contentBox}>
         {cards.map(card => (
           <SummaryCard key={card.name} name={card.name} total={card.total} />
