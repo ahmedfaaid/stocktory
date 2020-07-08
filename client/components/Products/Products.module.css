@@ -1,3 +1,43 @@
 .products_container {
-  min-height: 100vh;
+  padding: 2rem;
+  /* display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem; */
+}
+
+/* .products_card {
+  padding: 1rem;
+  border-radius: 1rem;
+  box-shadow: 0 3px 3px 2px #EBEBEB;
+}
+
+.productName {
+  font-size: 1.8rem;
+  text-align: center;
+  color: #415A77;
+}
+
+.detail_box {
+  width: 100%;
+  margin: 2rem 0;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.price, .quantity {
+  font-size: 1.6rem;
+  color: #6E89BC;
+}
+
+.value {
+  color: #000;
+} */
+
+.products_table {
+  min-width: min-content;
+  margin: auto;
+}
+
+.table_head {
+  padding: 4rem 0;
 }
